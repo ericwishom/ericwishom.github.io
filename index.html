@@ -28,6 +28,26 @@
     <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
-    <!--Placeholder for identify and track script -->
+     <script type="text/javascript">
+      function identify(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+        var fullname = form["fullname"].value;
+        var destination = form["destination"].value;
+        var details = form["details"].value;
+
+        analytics.identify(12345, {
+            email: email, 
+            name: fullname
+        });
+    
+        analytics.track('Destination Submitted', {
+          destination: destination,
+          details: details,
+        });
+
+      }
+</script>
 </body> 
 </html>
