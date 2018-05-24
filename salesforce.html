@@ -67,7 +67,7 @@
     <script type="text/javascript">
         function identify(e) {
             e.preventDefault();
-            var form = document.getElementsByName("form");
+            var form = e.target;
             var email = form["email"].value;
             var title = form["title"].value;
             var comp_id = form["comp_id"].value;
@@ -89,7 +89,7 @@
                 company: {
                     id: comp_id,
                     name: comp_name
-                }
+                },
                 fullname: fullname,
                 phone: phone,
                 state: state,
