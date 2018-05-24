@@ -90,7 +90,7 @@
                     id: comp_id,
                     name: comp_name
                 },
-                fullname: fullname,
+                name: fullname,
                 phone: phone,
                 state: state,
                 rating: rating,
@@ -108,8 +108,7 @@
             });
 
             analytics.track('Form Submitted', {
-                destination: destination,
-                details: details,
+                type: "Lead Generation",
             });
 
         }
