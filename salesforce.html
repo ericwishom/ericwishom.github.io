@@ -67,7 +67,7 @@
     <script type="text/javascript">
         function identify(e) {
             e.preventDefault();
-            var form = e.target;
+            var form = document.getElementsByName("form");
             var email = form["email"].value;
             var title = form["title"].value;
             var comp_id = form["comp_id"].value;
