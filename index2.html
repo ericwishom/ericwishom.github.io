@@ -1,53 +1,121 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-    <title>Home Questionnaire<span id="selection-marker-1" class="redactor-selection-marker"></span></title> 
-<script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-  analytics.load("Ptn5JylAqegn1RQEo7xEHs8iBOTH8tsE");
-  analytics.page();
-  }}();
-</script>
-</head> 
-    
-<body> 
-<h1>What is your favorite place to travel?</h1> 
-<p>I am building a directory of the sweetest travel destinations.</p>  
-<form name="travel" onsubmit="identify(event)">
-     What is your favorite travel destination?
-    <input name="destination" required="" size="81" type="text"/> 
-    <br><br><br> 
-    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
-    <br><br> 
-    <textarea cols="81" name="details" required="" rows="10">
-    </textarea> 
-    <br><br> 
-    Name: <input name="fullname" required="" size="75" type="text"/> 
-    <br><br> 
-    Email: <input name="email" required="" size="75" type="email"/> 
-    <br><br>
-    <input name="submit" type="submit" value="submit"/>
-</form> 
-     <script type="text/javascript">
-      function identify(e){
-        e.preventDefault();
-        var form = e.target;
-        var email = form["email"].value;
-        var fullname = form["fullname"].value;
-        var destination = form["destination"].value;
-        var details = form["details"].value;
+<!DOCTYPE html>
+<html>
 
-        analytics.identify(abc123, {
-            email: email, 
-            name: fullname
-        });
-    
-        analytics.track('Form Submitted', {
-          destination: destination,
-          details: details,
-        });
+<head>
+    <title>Home Questionnaire<span id="selection-marker-1" class="redactor-selection-marker"></span></title>
+    <script>
+        ! function() {
+            var analytics = window.analytics = window.analytics || [];
+            if (!analytics.initialize)
+                if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+                else {
+                    analytics.invoked = !0;
+                    analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"];
+                    analytics.factory = function(t) {
+                        return function() {
+                            var e = Array.prototype.slice.call(arguments);
+                            e.unshift(t);
+                            analytics.push(e);
+                            return analytics
+                        }
+                    };
+                    for (var t = 0; t < analytics.methods.length; t++) {
+                        var e = analytics.methods[t];
+                        analytics[e] = analytics.factory(e)
+                    }
+                    analytics.load = function(t, e) {
+                        var n = document.createElement("script");
+                        n.type = "text/javascript";
+                        n.async = !0;
+                        n.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+                        var o = document.getElementsByTagName("script")[0];
+                        o.parentNode.insertBefore(n, o);
+                        analytics._loadOptions = e
+                    };
+                    analytics.SNIPPET_VERSION = "4.1.0";
+                    analytics.load("Ptn5JylAqegn1RQEo7xEHs8iBOTH8tsE");
+                    analytics.page();
+                }
+        }();
+    </script>
+</head>
 
-      }
-</script>
-</body> 
+<body>
+    <h1>Fill Out This Lead Form!</h1>
+    <p>Segment-Salesforce Testing.</p>
+    <form name="leadform" onsubmit="identify(event)">
+        What Are Your Details?
+        <input name="destination" required="" size="81" type="text" />
+        <br><br><br> Any recommendations (cool things to do, places to visit or restaurants to eat)?
+        <br><br>
+        <textarea cols="81" name="details" required="" rows="10">
+    </textarea>
+        <br><br> Name: <input name="fullname" required="" size="75" type="text" />
+        <br><br> Email: <input name="email" required="" size="75" type="email" />
+        <br><br> Job Title: <input name="title" required="" size="75" type="text" />
+        <br><br> Company ID: <input name="comp_id" required="" size="75" type="number" />
+        <br><br> Company Name: <input name="comp_name" required="" size="75" type="text" />
+        <br><br> Phone: <input name="phone" required="" size="75" type="text" />
+        <br><br> State: <input name="state" required="" size="75" type="text" />
+        <br><br> Rating: <input name="rating" required="" size="75" type="text" />
+        <br><br> Home City: <input name="home_city" required="" size="75" type="text" />
+        <br><br> Home State: <input name="home_state" required="" size="75" type="text" />
+        <br><br> Home Country: <input name="home_country" required="" size="75" type="text" />
+        <br><br> Home Zip: <input name="home_zip" required="" size="75" type="text" />
+        <br><br> Home Street: <input name="home_street" required="" size="75" type="text" />
+        
+        <input name="submit" type="submit" value="submit" />
+    </form>
+    <script type="text/javascript">
+        function identify(e) {
+            e.preventDefault();
+            var form = e.target;
+            var email = form["email"].value;
+            var title = form["title"].value;
+            var comp_id = form["comp_id"].value;
+            var comp_name = form["comp_name"].value;
+            var fullname = form["fullname"].value;
+            var phone = form["phone"].value;
+            var state = form["state"].value;
+            var rating = form["rating"].value
+            var details = form["details"].value;
+            var home_city = form["home_city"].value;
+            var home_zip = form["home_zip"].value;
+            var home_country = form["home_country"].value;
+            var home_street = form["home_street"].value;
+            var home_state = form["home_state"].value;
+
+            analytics.identify(118363, {
+                email: email,
+                title: title,
+                company: {
+                    id: comp_id,
+                    name: comp_name
+                }
+                fullname: fullname,
+                phone: phone,
+                state: state,
+                rating: rating,
+                address: {
+                    city: home_city,
+                    postalCode: home_zip,
+                    country: home_country,
+                    street: home_street,
+                    state: home_state
+                }
+            }, {
+                'integrations': {
+                    'Salesforce': true
+                }
+            });
+
+            analytics.track('Form Submitted', {
+                destination: destination,
+                details: details,
+            });
+
+        }
+    </script>
+</body>
+
 </html>
