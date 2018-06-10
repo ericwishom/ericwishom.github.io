@@ -83,7 +83,7 @@
             var home_street = form["home_street"].value;
             var home_state = form["home_state"].value;
 
-            analytics.identify(1234567, {
+            analytics.identify('Lil Baby', {
                 email: email,
                 title: title,
                 company: {
@@ -91,6 +91,9 @@
                     name: comp_name
                 },
                 name: fullname,
+                is_first_session: false,
+                clicked_random_link: true,
+                viewed_product: true,
                 phone: phone,
                 state: state,
                 rating: rating,
