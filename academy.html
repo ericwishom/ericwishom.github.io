@@ -83,17 +83,20 @@
             var home_street = form["home_street"].value;
             var home_state = form["home_state"].value;
 
-            analytics.identify('Lil Baby', {
+            analytics.identify('nested_test', {
                 email: email,
                 title: title,
                 company: {
                     id: comp_id,
                     name: comp_name
                 },
+                pinterest_traits: {
+                    is_first_session: 'false',
+                    clicked_random_link: 'true',
+                    viewed_product: 'true',
+                    leadSource: 'Newsletter'
+                },
                 name: fullname,
-                is_first_session: 'false',
-                clicked_random_link: 'true',
-                viewed_product: 'true',
                 category: 'Marketing',
                 phone: phone,
                 state: state,
