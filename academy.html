@@ -82,8 +82,9 @@
             var home_country = form["home_country"].value;
             var home_street = form["home_street"].value;
             var home_state = form["home_state"].value;
-
-            analytics.identify('nested_test', {
+            var rn = Math.floor((Math.random() * 1000000) + 1);
+            
+            analytics.identify(rn, {
                 email: email,
                 title: title,
                 leadSource: 'Newsletter',
