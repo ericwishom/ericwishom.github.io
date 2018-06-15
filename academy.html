@@ -46,6 +46,8 @@
     <form name="form" onsubmit="identify(event)">
         <br><br><br> 
         <br><br> Name: <input name="fullname" size="75" type="text" />
+        <br><br> Age: <input name="age" size="75" type="text" />
+        <br><br> Gender: <input name="gender" size="75" type="text" />
         <br><br> Email: <input name="email" size="75" type="email" />
         <br><br> Job Title: <input name="title" size="75" type="text" />
         <br><br> Company ID: <input name="comp_id" size="75" type="number" />
@@ -70,6 +72,8 @@
             var form = e.target;
             var email = form["email"].value;
             var title = form["title"].value;
+            var age = form["age"].value;
+            var gender = form["gender"].value;
             var comp_id = form["comp_id"].value;
             var comp_name = form["comp_name"].value;
             var fullname = form["fullname"].value;
@@ -87,6 +91,8 @@
             analytics.identify(rn, {
                 email: email,
                 title: title,
+                age: age,
+                gender: gender,
                 leadSource: 'Newsletter',
                 is_first_session: 'true',
                 clicked_random_link: 'true',
