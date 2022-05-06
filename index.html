@@ -6,14 +6,13 @@
   const client = new Persona.Client({
     templateId: 'itmpl_cHkiU8ELvM37gf6eZ6fTeaXR',
     environment: 'production',
-    onReady: () => client.open(),
+    //onReady: () => client.open(), // Instantiate Inquiry onclick not on pageload
     onComplete: ({ inquiryId, status, fields }) => {
       console.log(`Completed inquiry ${inquiryId} with status ${status}`);
     }
   });
 </script>
-  
-    This sends page calls to Segment's Debugger!
+  <button type="button" onclick="client.open()"> Start Verification!</button>
 
 </body>
 </html>
